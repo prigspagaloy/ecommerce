@@ -1,0 +1,92 @@
+.ad-slider {
+    position: absolute;
+    width: 100%;
+    height: 50vw;
+    z-index: -2;
+}
+
+.ad-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+ }
+ 
+.promotional-ad {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.ad-container::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background-image: linear-gradient(rgba(255, 254, 254, 0), white);
+}
+ 
+.promotional-arrow-container {
+    position: relative;
+    height: 30vw;
+    /* display: flex;
+    justify-content: space-between;
+    height: 25rem; */
+}
+ 
+.arrow-left {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 4rem;
+    height: 100%;
+    display: grid;
+    place-items: center;
+/* display: flex;
+align-items: center;
+padding: 2rem;
+height: 100%;
+cursor: pointer; */
+}
+
+.arrow-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4rem;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    /* align-items: center;
+    padding: 2rem;
+    height: 100%;
+    cursor: pointer; */
+}
+
+.fa-angle-left:hover, .fa-angle-right:hover {
+    background-color: rgba(73, 73, 73, 0.397);
+}
+
+.fa-angle-left {
+    /* position: absolute; */
+    top: 50%;
+    left: 25%;
+}
+
+.fa-angle-right {
+    /* position: absolute; */
+    top: 50%;
+    right: 25%;
+}
+
+.fa-angle-left, .fa-angle-right {
+    font-size: 4rem;
+    color: rgb(134, 133, 133);
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}

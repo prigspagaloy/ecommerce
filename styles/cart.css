@@ -1,0 +1,151 @@
+.web-content {
+    display: flex;
+    gap: 1rem;
+}
+
+.cart-display {
+    width: 100%;
+}
+
+.cart-empty {
+    text-align: center;
+    height: 100%;
+    align-content: center;
+}
+
+.cart-product-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    border-bottom: 1px solid black;
+    padding: 1rem;
+}
+
+.cart-title {
+    width: 100%;
+    border-bottom: 1px solid black;
+    padding-bottom: 1rem;
+}
+
+.cart-product-img {
+    width: 10rem;
+    height: 10rem;
+}
+
+.cart-product-info-box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.cart-product-info {
+    width: 100%;
+}
+
+.cart-product-name {
+    padding-right: 1rem;
+}
+
+.price-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.quantity-container {
+    display: inline-flex;
+    place-items: center;
+    gap: 1rem;
+}
+
+.quantity-count {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cart-decrease-quantity, .cart-increase-quantity {
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.delete-item {
+    cursor: pointer;
+}
+
+.subtotal {
+    width: 100%;
+    text-align: right;
+}
+
+.checkout-section {
+    position: relative;
+    width: 40%;
+}
+
+.checkout-container {
+    position: absolute;
+    font-weight: bold;
+    font-size: 2vw;
+    align-content: center;
+    width: fit-content;
+    /* height: 10rem; */
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 20px;
+    line-height: 2;
+}
+
+.checkout-container.sticky {
+    position: fixed;
+    top: 2rem;
+    right: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .web-content {
+        flex-direction: column;
+    }
+
+    .checkout-section {
+        display: none;
+        /* position: relative;
+        height: fit-content; */
+    }
+
+    .cart-product-info {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .cart-product-name {
+        overflow: wrap;
+    }
+
+    .price-container {
+        flex-direction: column;
+    }
+    
+    .quantity-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .quantity-count {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .delete-item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .subtotal {
+        /* display: none; */
+        /* font-size: 30px;
+        text-align: left; */
+    }
+}

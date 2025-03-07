@@ -1,0 +1,123 @@
+@import "./header.css";
+@import "./hamburger.css";
+@import "./promotional.css";
+@import "./slider.css";
+@import "./products.css";
+@import "./cart.css";
+@import "./checkout.css";
+@import "./footer.css";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* body {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-section {
+
+} */
+
+/* .web-content {
+    min-height: 100vh;
+}
+ */
+.product-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    justify-content: center;
+    gap: 2rem;
+    padding: 1.5rem;
+}
+
+.all-products-div-box,
+.free-shipping,
+.tech,
+.fashion {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    /* width: fit-content; */
+    padding: 1rem;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 3px rgba(65, 64, 64, 0.534);
+}
+
+.all-products-div-box-container,
+.fashion-container,
+.tech-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1rem;
+    column-gap: 1rem;
+}
+
+.all-products-div-btn-img {
+    place-self: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* .product-content {
+    display: grid;
+    height: fit-content;
+    border: 1px solid rgba(65, 64, 64, 0.212);
+    border-radius: 5px;
+    background-color: white;
+} */
+
+/* .product-img {
+    text-align: center;
+    width: 100%;
+    height: 16rem;
+    padding: 1rem;
+    place-self: center;
+} */
+
+.free-shipping-img-box {
+    width: 100%;
+    height: 100%;
+}
+
+.free-shipping-img {
+    width: 100%;
+    height: 100%;
+}
+
+/* .free-shipping {
+    background-color: white;
+    box-shadow: 0 0 5px 3px rgba(65, 64, 64, 0.534)
+}
+
+.tech {
+    background-color: white;
+    box-shadow: 0 0 5px 3px rgba(65, 64, 64, 0.534)
+}
+
+.fashion {
+    background-color: white;
+    box-shadow: 0 0 5px 3px rgba(65, 64, 64, 0.534);
+} */
+
+/* .add-to-cart {
+    place-self: center;
+    align-self: end;
+    padding: 0.3rem;
+    width: 40%;
+    background-color: rgb(248, 203, 144);
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid rgba(65, 64, 64, 0.212);
+    cursor: pointer;
+}
+
+.add-to-cart:active {
+    background-color: rgba(100, 98, 96, 0.74);
+    color: white;
+} */
