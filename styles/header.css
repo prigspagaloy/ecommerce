@@ -221,18 +221,18 @@ a {
         transform: translate(-2px, -9px) rotate(-45deg);
     }
 
-    .burger-menu-section {
+    .burger-menu-section.show {
         position: absolute;
         top: 0;
-        right: -100%;
+        right: 0;
         width: 200px;
         height: 200px;
         background-color: white;
         transition: 0.3s;
     }
 
-    .burger-menu-section.show {
-        right: 0;
+    .burger-menu-section {
+        right: -100%;
         transition: 0.3s;
     }
 
