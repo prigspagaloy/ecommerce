@@ -26,7 +26,7 @@ header.innerHTML = `
           </select>
       </div>
       <div class="cart-hamburger">
-        <a href="/pages/cart.html?data=cart">
+        <a href="/pages/cart.html">
             <div class="add-cart-box">
                 <span class="cart-count"></span>
                 <img class="cart-logo" src="../Img/cart.png" alt="cart-logo" style="width:2rem; height:1.7rem">
