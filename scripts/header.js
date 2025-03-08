@@ -14,11 +14,11 @@ export const header = document.querySelector(".header-section");
 
 header.innerHTML = `
     <section class="header">
-      <img class="web-logo" src="../Img/ecommercelogo.jpg" alt="logo...">
+      <img class="web-logo" src="../ecommerce/Img/ecommercelogo.jpg" alt="logo...">
       <div class="delivery-location"></div>
       <div class="search-bar">
           <input type="search" id="search" name="search" placeholder="Search Product">
-          <img class="search-btn" src="../Img/search.png" alt="search-button">
+          <img class="search-btn" src="../ecommerce/Img/search.png" alt="search-button">
       </div>
       <div class="language">
           <label class="translate-label" for="translate">EN</label>
@@ -29,7 +29,7 @@ header.innerHTML = `
         <a href="/pages/cart.html">
             <div class="add-cart-box">
                 <span class="cart-count"></span>
-                <img class="cart-logo" src="../Img/cart.png" alt="cart-logo" style="width:2rem; height:1.7rem">
+                <img class="cart-logo" src="../ecommerce/Img/cart.png" alt="cart-logo" style="width:2rem; height:1.7rem">
             </div>
         </a>
         <div class="hamburger-menu">
