@@ -14,11 +14,11 @@ export const header = document.querySelector(".header-section");
 
 header.innerHTML = `
     <section class="header">
-      <img class="web-logo" src="../Img/ecommercelogo.png" alt="logo...">
+      <img class="web-logo" src="/Img/ecommercelogo.png" alt="logo...">
       <div class="delivery-location"></div>
       <div class="search-bar">
           <input type="search" id="search" name="search" placeholder="Search Product">
-          <img class="search-btn" src="../Img/search.png" alt="search-button">
+          <img class="search-btn" src="/Img/search.png" alt="search-button">
       </div>
       <div class="language">
           <label class="translate-label" for="translate">EN</label>
