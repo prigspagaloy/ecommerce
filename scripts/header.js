@@ -58,6 +58,16 @@ header.innerHTML = `
     </section>
     <div class="burger-menu-section"></div>
 `;
+if (window.location.href == `${window.location.origin}/pages/cart.html`) {
+const url = window.location.search;
+const usp = new URLSearchParams(url);
+usp.set("data", "product selected")
+history.pushState({}, "", window.location.href.replace(".html", "") + "?" + usp);
+console.log(usp.toString())
+console.log(usp.get("data"))
+}
+console.log(window.location)
+
 
 const webLogo = document.querySelector(".web-logo");
 const hamburger = document.querySelector(".hamburger-menu");
