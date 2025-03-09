@@ -58,12 +58,6 @@ header.innerHTML = `
     </section>
     <div class="burger-menu-section"></div>
 `;
-// if (window.location.href == `${window.location.origin}/pages/cart.html`) {
-//   const url = window.location.search;
-//   const usp = new URLSearchParams(url);
-//   usp.set("data", "product selected");
-//   history.pushState({}, "", window.location.href + "?" + usp);
-// }
 
 const webLogo = document.querySelector(".web-logo");
 const searchImg = document.querySelector(".search-img");
@@ -76,18 +70,8 @@ const productCategories = document.querySelector(".product-categories");
 export const cartCountDisplay = document.querySelector(".cart-count");
 const menuSection = document.querySelector(".burger-menu-section");
 
-// if (window.location.href === `${window.location.origin}/ecommerce/`) {
-//   webLogo.setAttribute("src", "./Img/ecommercelogo.jpg");
-//   searchImg.setAttribute("src", "./Img/search.png");
-//   cartLogo.setAttribute("src", "./Img/cart.png");
-// } else {
-//   webLogo.setAttribute("src", "../Img/ecommercelogo.jpg");
-//   searchImg.setAttribute("src", "../Img/search.png");
-//   cartLogo.setAttribute("src", "../Img/cart.png");
-// }
-
 webLogo.addEventListener("click", () => {
-  window.location.href = "/";
+  window.location.pathname = "/" || "/ecommerce/";
 });
 
 const fetchCountry = (data) => {
@@ -115,7 +99,7 @@ const fetchProducts = (data) => {
     .map((item) => {
       //console.log(item)
       return `
-        <a href="${window.location.pathname == "/" ? `./pages/products.html?data=${item.replace(/\W+/g, "")}` : `../pages/products.html?data=${item.replace(/\W+/g, "")}`}">
+        <a href="${window.location.pathname === "/" || window.location.pathname === "/ecommerce/" ? `./pages/products.html?data=${item.replace(/\W+/g, "")}` : `../pages/products.html?data=${item.replace(/\W+/g, "")}`}">
           <li class="category-list" data-id="${item}">${item}</li>
         </a>
       `;
