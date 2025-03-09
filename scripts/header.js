@@ -26,7 +26,7 @@ header.innerHTML = `
           </select>
       </div>
       <div class="cart-hamburger">
-        <a href="${window.location.href == "/" ? "./pages/cart.html" : "../pages/cart.html"}">
+        <a href="${window.location.pathname == "/" ? "./pages/cart.html?data=product selected" : "../pages/cart.html?data=product selected"}">
             <div class="add-cart-box">
                 <span class="cart-count"></span>
                 <img class="cart-logo" alt="cart-logo" style="width:2rem; height:1.7rem">
@@ -58,12 +58,12 @@ header.innerHTML = `
     </section>
     <div class="burger-menu-section"></div>
 `;
-if (window.location.href == `${window.location.origin}/pages/cart.html`) {
-  const url = window.location.search;
-  const usp = new URLSearchParams(url);
-  usp.set("data", "product selected");
-  history.pushState({}, "", window.location.href.replace(".html", "") + "?" + usp);
-}
+// if (window.location.href == `${window.location.origin}/pages/cart.html`) {
+//   const url = window.location.search;
+//   const usp = new URLSearchParams(url);
+//   usp.set("data", "product selected");
+//   history.pushState({}, "", window.location.href + "?" + usp);
+// }
 
 const webLogo = document.querySelector(".web-logo");
 const searchImg = document.querySelector(".search-img");
@@ -115,7 +115,7 @@ const fetchProducts = (data) => {
     .map((item) => {
       //console.log(item)
       return `
-        <a href="../pages/products.html?data=${item.replace(/\W+/g, "")}">
+        <a href="${window.location.pathname == "/" ? `./pages/products.html?data=${item.replace(/\W+/g, "")}` : `../pages/products.html?data=${item.replace(/\W+/g, "")}`}">
           <li class="category-list" data-id="${item}">${item}</li>
         </a>
       `;
