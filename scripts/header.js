@@ -99,7 +99,7 @@ const fetchProducts = (data) => {
     .map((item) => {
       //console.log(item)
       return `
-        <a href="${window.location.pathname === "/" || window.location.pathname === "/ecommerce/" ? `./pages/products.html?data=${item.replace(/\W+/g, "")}` : `../pages/products.html?data=${item.replace(/\W+/g, "")}`}">
+        <a href="${window.location.pathname === "/" || window.location.pathname === "/ecommerce/" ? `"./pages/products.html?data=${item.replace(/\W+/g, "")}"` : `"../pages/products.html?data=${item.replace(/\W+/g, "")}"`}">
           <li class="category-list" data-id="${item}">${item}</li>
         </a>
       `;
