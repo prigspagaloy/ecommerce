@@ -14,11 +14,11 @@ export const header = document.querySelector(".header-section");
 
 header.innerHTML = `
     <section class="header">
-      <img class="web-logo" src="${window.location.href == "/" ? "./Img/ecommercelogo.jpg" : "../Img/ecommercelogo.jpg"}" alt="logo...">
+      <img class="web-logo" src="${window.location.pathname == "/" | "/ecommerce/" ? "./Img/ecommercelogo.jpg" : "../Img/ecommercelogo.jpg"}" alt="logo...">
       <div class="delivery-location"></div>
       <div class="search-bar">
           <input type="search" id="search" name="search" placeholder="Search Product">
-          <img class="search-img" src="${window.location.href == "/" ? "./Img/search.png" : "../Img/search.png"}" alt="search-button">
+          <img class="search-img" src="${window.location.pathname === "/" | "/ecommerce/" ? "./Img/search.png" : "../Img/search.png"}" alt="search-button">
       </div>
       <div class="language">
           <label class="translate-label" for="translate">EN</label>
@@ -26,10 +26,10 @@ header.innerHTML = `
           </select>
       </div>
       <div class="cart-hamburger">
-        <a href="${window.location.href == "/" ? "./pages/cart.html?data=product selected" : "../pages/cart.html?data=product selected"}">
+        <a href="${window.location.pathname === "/" | "/ecommerce/" ? "./pages/cart.html?data=product selected" : "../pages/cart.html?data=product selected"}">
             <div class="add-cart-box">
                 <span class="cart-count"></span>
-                <img class="cart-logo" src="${window.location.href == "/" ? "./Img/cart.png" : "../Img/cart.png"}" alt="cart-logo" style="width:2rem; height:1.7rem">
+                <img class="cart-logo" src="${window.location.pathname === "/" | "/ecommerce/" ? "./Img/cart.png" : "../Img/cart.png"}" alt="cart-logo" style="width:2rem; height:1.7rem">
             </div>
         </a>
         <div class="hamburger-menu">
