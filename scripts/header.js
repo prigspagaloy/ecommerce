@@ -76,7 +76,7 @@ const productCategories = document.querySelector(".product-categories");
 export const cartCountDisplay = document.querySelector(".cart-count");
 const menuSection = document.querySelector(".burger-menu-section");
 
-if (window.location.href === "/") {
+if (window.location.href === `${window.location.origin}/ecommerce/`) {
   webLogo.setAttribute("src", "./Img/ecommercelogo.jpg");
   searchImg.setAttribute("src", "./Img/search.png");
   cartLogo.setAttribute("src", "./Img/cart.png");
