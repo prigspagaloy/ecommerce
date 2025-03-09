@@ -71,7 +71,7 @@ export const cartCountDisplay = document.querySelector(".cart-count");
 const menuSection = document.querySelector(".burger-menu-section");
 
 webLogo.addEventListener("click", () => {
-  window.location.pathname = "/" || "/ecommerce/";
+  window.location.href = `${window.location.origin}`;
 });
 
 const fetchCountry = (data) => {
