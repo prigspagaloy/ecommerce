@@ -14,11 +14,11 @@ export const header = document.querySelector(".header-section");
 
 header.innerHTML = `
     <section class="header">
-      <img class="web-logo" alt="logo...">
+      <img class="web-logo" src="${window.pathname == "/" ? "./Img/ecommercelogo.jpg" : "../Img/ecommercelogo.jpg"}" alt="logo...">
       <div class="delivery-location"></div>
       <div class="search-bar">
           <input type="search" id="search" name="search" placeholder="Search Product">
-          <img class="search-img" alt="search-button">
+          <img class="search-img" src="${window.pathname == "/" ? "./Img/search.png" : "../Img/search.png"}" alt="search-button">
       </div>
       <div class="language">
           <label class="translate-label" for="translate">EN</label>
@@ -29,7 +29,7 @@ header.innerHTML = `
         <a href="${window.location.pathname == "/" ? "./pages/cart.html?data=product selected" : "../pages/cart.html?data=product selected"}">
             <div class="add-cart-box">
                 <span class="cart-count"></span>
-                <img class="cart-logo" alt="cart-logo" style="width:2rem; height:1.7rem">
+                <img class="cart-logo" src="${window.pathname == "/" ? "./Img/cart.png" : "../Img/cart.png"}" alt="cart-logo" style="width:2rem; height:1.7rem">
             </div>
         </a>
         <div class="hamburger-menu">
@@ -76,15 +76,15 @@ const productCategories = document.querySelector(".product-categories");
 export const cartCountDisplay = document.querySelector(".cart-count");
 const menuSection = document.querySelector(".burger-menu-section");
 
-if (window.location.href === `${window.location.origin}/ecommerce/`) {
-  webLogo.setAttribute("src", "./Img/ecommercelogo.jpg");
-  searchImg.setAttribute("src", "./Img/search.png");
-  cartLogo.setAttribute("src", "./Img/cart.png");
-} else {
-  webLogo.setAttribute("src", "../Img/ecommercelogo.jpg");
-  searchImg.setAttribute("src", "../Img/search.png");
-  cartLogo.setAttribute("src", "../Img/cart.png");
-}
+// if (window.location.href === `${window.location.origin}/ecommerce/`) {
+//   webLogo.setAttribute("src", "./Img/ecommercelogo.jpg");
+//   searchImg.setAttribute("src", "./Img/search.png");
+//   cartLogo.setAttribute("src", "./Img/cart.png");
+// } else {
+//   webLogo.setAttribute("src", "../Img/ecommercelogo.jpg");
+//   searchImg.setAttribute("src", "../Img/search.png");
+//   cartLogo.setAttribute("src", "../Img/cart.png");
+// }
 
 webLogo.addEventListener("click", () => {
   window.location.href = "/";
