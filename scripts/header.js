@@ -69,15 +69,14 @@ const productCategoriesBox = document.querySelector(".product-categories-box");
 const productCategories = document.querySelector(".product-categories");
 export const cartCountDisplay = document.querySelector(".cart-count");
 const menuSection = document.querySelector(".burger-menu-section");
-
+const pathArray = window.location.pathname.split("/");
+console.log(pathArray)
 webLogo.addEventListener("click", () => {
   
-  if (window.location.href == `${window.location.origin}/ecommerce/`) {
-    window.location.href = `${window.location.origin}/ecommerce/`;
-  } else {
-    window.location.href = "/";
-  }
+  window.location.href = window.location.origin + pathArray[0];
 });
+
+
 
 const fetchCountry = (data) => {
     const countryName = document.querySelector(".delivery-location");
