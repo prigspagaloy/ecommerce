@@ -14,11 +14,11 @@ export const header = document.querySelector(".header-section");
 
 header.innerHTML = `
     <section class="header">
-      <img class="web-logo" src="./Img/ecommercelogo.jpg" alt="logo...">
+      <img class="web-logo" alt="logo...">
       <div class="delivery-location"></div>
       <div class="search-bar">
           <input type="search" id="search" name="search" placeholder="Search Product">
-          <img class="search-btn" src="./Img/search.png" alt="search-button">
+          <img class="search-img" alt="search-button">
       </div>
       <div class="language">
           <label class="translate-label" for="translate">EN</label>
@@ -26,10 +26,10 @@ header.innerHTML = `
           </select>
       </div>
       <div class="cart-hamburger">
-        <a href="/pages/cart.html">
+        <a href="../pages/cart.html">
             <div class="add-cart-box">
                 <span class="cart-count"></span>
-                <img class="cart-logo" src="./Img/cart.png" alt="cart-logo" style="width:2rem; height:1.7rem">
+                <img class="cart-logo" alt="cart-logo" style="width:2rem; height:1.7rem">
             </div>
         </a>
         <div class="hamburger-menu">
@@ -58,8 +58,16 @@ header.innerHTML = `
     </section>
     <div class="burger-menu-section"></div>
 `;
+if (window.location.href == `${window.location.origin}/pages/cart.html`) {
+  const url = window.location.search;
+  const usp = new URLSearchParams(url);
+  usp.set("data", "product selected");
+  history.pushState({}, "", window.location.href.replace(".html", "") + "?" + usp);
+}
 
 const webLogo = document.querySelector(".web-logo");
+const searchImg = document.querySelector(".search-img");
+const cartLogo = document.querySelector(".cart-logo");
 const hamburger = document.querySelector(".hamburger-menu");
 export const burgerLine = document.querySelector(".hamburger-line");
 const productCategory = document.querySelector(".category");
@@ -67,6 +75,16 @@ const productCategoriesBox = document.querySelector(".product-categories-box");
 const productCategories = document.querySelector(".product-categories");
 export const cartCountDisplay = document.querySelector(".cart-count");
 const menuSection = document.querySelector(".burger-menu-section");
+
+if (window.location.href === "/") {
+  webLogo.setAttribute("src", "./Img/ecommercelogo.jpg");
+  searchImg.setAttribute("src", "./Img/search.png");
+  cartLogo.setAttribute("src", "./Img/cart.png");
+} else {
+  webLogo.setAttribute("src", "../Img/ecommercelogo.jpg");
+  searchImg.setAttribute("src", "../Img/search.png");
+  cartLogo.setAttribute("src", "../Img/cart.png");
+}
 
 webLogo.addEventListener("click", () => {
   window.location.href = "/";
@@ -97,7 +115,7 @@ const fetchProducts = (data) => {
     .map((item) => {
       //console.log(item)
       return `
-        <a href="/pages/products.html?data=${item.replace(/\W+/g, "")}">
+        <a href="../pages/products.html?data=${item.replace(/\W+/g, "")}">
           <li class="category-list" data-id="${item}">${item}</li>
         </a>
       `;
