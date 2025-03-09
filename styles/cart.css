@@ -79,6 +79,7 @@
 }
 
 .checkout-section {
+    display: none;
     position: relative;
     width: 40%;
 }

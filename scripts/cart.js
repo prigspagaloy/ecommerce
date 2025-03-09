@@ -24,6 +24,10 @@ let cartCount = () => {
 };
 cartCount();
 
+window.onload = () => {
+  cartDisplay();
+}
+
 const cartDisplay = () => {
   if (cart.length === 0) {
     cartProducts.innerHTML = `
@@ -163,7 +167,9 @@ const checkoutBox = (itemSubtotal) => {
   } else {
     checkoutBtn.style.display = "none";
   }
-  if (cart.length === 0) {
+  if (cart.length !== 0) {
+    checkoutSection.style.display = "block";
+  } else {
     checkoutSection.style.display = "none";
   }
 
