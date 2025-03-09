@@ -142,3 +142,5 @@ hamburger.addEventListener("click", () => {
   burgerLine.classList.toggle("active");
   menuSection.classList.toggle("show");
 })
+
+// na buang naku
