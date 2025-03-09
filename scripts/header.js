@@ -58,7 +58,7 @@ header.innerHTML = `
     </section>
     <div class="burger-menu-section"></div>
 `;
-if (window.location.href == `${window.location.origin}/pages/cart.html`) {
+if (window.location.href == `${window.location.origin}/ecommerce/pages/cart.html`) {
   const url = window.location.search;
   const usp = new URLSearchParams(url);
   usp.set("data", "product selected");
