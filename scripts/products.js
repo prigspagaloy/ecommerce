@@ -72,6 +72,8 @@ const categories = (data) => {
     });
     if (window.location.href === `${window.location.origin}/pages/products.html?data=All`) {
         productDisplay(data);
+    } else if (window.location.href === `${window.location.origin}/ecommerce/pages/products.html?data=All`) {
+        productDisplay(data);
     } else {
         productDisplay(categoryFilter);
     }
