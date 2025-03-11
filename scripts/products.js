@@ -1,5 +1,5 @@
 import { header, cart, cartCount } from "./header.js";
-import { styling } from "./checkout.js";
+import "./checkout.js";
 import { footer } from "./footer.js";
 
 fetch("https://fakestoreapi.com/products")

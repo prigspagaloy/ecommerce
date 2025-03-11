@@ -1,5 +1,5 @@
 import "./header.js";
-import { styling } from "./checkout.js";
+import "./checkout.js";
 import "./footer.js";
 
 const headerSection = document.querySelector(".header-section");

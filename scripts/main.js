@@ -72,11 +72,12 @@ const productSliderSection = (data) => {
   productSlider.forEach(item => {
     item.innerHTML = data.map(items => {
       return (`
-      <img class="img-sample-slider" src="${items.image}">
+      <img class="img-sample-slider" src="${items.image}" data-id="${items.title}">
       `);
     }).join("")
   })
 
+  const imgBtn = document.querySelectorAll(".img-sample-slider");
   const imgSlider1 = document.getElementById("slider-img1");
   const imgSlider2 = document.getElementById("slider-img2");
   const nextSlider1 = document.getElementById("next1");
@@ -88,13 +89,24 @@ const productSliderSection = (data) => {
     imgSlider1.scrollLeft += 100;
   })
   prevSlider1.addEventListener("click", () => {
-    imgSlider1.scrollLeft += -100;
+    imgSlider1.scrollLeft -= 100;
   })
   nextSlider2.addEventListener("click", () => {
     imgSlider2.scrollLeft += 100;
   })
   prevSlider2.addEventListener("click", () => {
-    imgSlider2.scrollLeft += -100;
+    imgSlider2.scrollLeft -= 100;
+  })
+
+  imgBtn.forEach(img => {
+    img.addEventListener("click", (e) => {
+      const itemTarget = e.target.dataset.id.replace(/\W+/g, "");
+      if (e.target && window.location.pathname === "ecommerce") {
+        window.location = `./pages/info.html?data=${itemTarget}`
+      } else {
+        window.location = `/pages/info.html?data=${itemTarget}`
+      }
+    })
   })
 }
 /* const categories = (data) => {

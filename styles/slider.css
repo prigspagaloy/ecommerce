@@ -39,6 +39,8 @@
 .img-sample-slider {
     width: 10rem;
     height: 10rem;
+    place-self: center;
+    cursor: pointer;
 }
 
 .arrow-btns {
@@ -52,6 +54,8 @@
 }
 
 .arrow-btn-left, .arrow-btn-right {
+    position: absolute;
+    top: 35%;
     height: fit-content;
     font-size: 2rem;
     padding: 1rem;
@@ -59,4 +63,8 @@
     color: rgb(32, 32, 32);
     background-color: rgba(255, 255, 255, 0.5);
     cursor: pointer;
+}
+
+.arrow-btn-right {
+    right: 0;
 }

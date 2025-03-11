@@ -6,7 +6,7 @@ const webContent = document.querySelector(".web-content");
 
 //console.log(screen.height - footer.offsetHeight)
 
-export const styling = () => {
+const styling = () => {
     webContent.style.minHeight = `${screen.height - footer.offsetHeight}px`;
 }
 styling();

@@ -149,3 +149,5 @@ hamburger.addEventListener("click", () => {
   burgerLine.classList.toggle("active");
   menuSection.classList.toggle("show");
 })
+
+// console.log(window.location = "/pages/info.html")
