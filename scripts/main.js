@@ -101,7 +101,7 @@ const productSliderSection = (data) => {
   imgBtn.forEach(img => {
     img.addEventListener("click", (e) => {
       const itemTarget = e.target.dataset.id.replace(/\W+/g, "");
-      if (e.target && window.location.pathname === "ecommerce") {
+      if (e.target && window.location.pathname === "/ecommerce/") {
         window.location = `./pages/info.html?data=${itemTarget}`
       } else {
         window.location = `/pages/info.html?data=${itemTarget}`
