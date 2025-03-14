@@ -69,10 +69,11 @@ const pictureCollage = (data) => {
 };
 
 const productSliderSection = (data) => {
+  console.log(data)
   productSlider.forEach(item => {
     item.innerHTML = data.map(items => {
       return (`
-      <img class="img-sample-slider" src="${items.image}" data-id="${items.title}">
+      <img id="${items.title}" class="img-sample-slider" src="${items.image}" data-id="${items.id}">
       `);
     }).join("")
   })
@@ -100,15 +101,18 @@ const productSliderSection = (data) => {
 
   imgBtn.forEach(img => {
     img.addEventListener("click", (e) => {
-      const itemTarget = e.target.dataset.id.replace(/\W+/g, "");
+      const itemTargetId = e.target.id;
+      const itemTargetDataset = e.target.dataset.id;
+      // console.log(itemTarget)
       if (e.target && window.location.pathname === "/ecommerce/") {
-        window.location = `./pages/info.html?data=${itemTarget}`
+        window.location = `./pages/info.html?name=${itemTargetId}&data=${itemTargetDataset}`
       } else {
-        window.location = `/pages/info.html?data=${itemTarget}`
+        window.location = `/pages/info.html?name=${itemTargetId}&data=${itemTargetDataset}`
       }
     })
   })
 }
+
 /* const categories = (data) => {
   productCategories.addEventListener("change", () => {
     const categorySelected = productCategories.value;

@@ -47,11 +47,11 @@ const productDisplay = (data) => {
                 sameItem.quantity += 1;
             } else {
                 cart.push({
-                productId: data[index].id,
-                img: data[index].image,
-                title: data[index].title,
-                price: data[index].price,
-                quantity: 1,
+                    productId: data[index].id,
+                    img: data[index].image,
+                    title: data[index].title,
+                    price: data[index].price,
+                    quantity: 1,
                 });
             }
             

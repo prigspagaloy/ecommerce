@@ -1,0 +1,50 @@
+.product-info-page {
+    align-content: center;
+}
+
+.info-page-product-container {
+    display: flex;
+    padding: 1rem;
+}
+
+.info-page-img-container {
+    align-self: center;
+    width: 20rem;
+    height: 100%;
+}
+
+.info-page-img {
+    width: inherit;
+    height: 100%;
+    padding: 1rem;
+}
+
+.product-detail-container {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    max-width: 40rem;
+    padding: 2rem;
+    line-height: 1;
+    gap: 1rem;
+}
+
+.quantity-count-box {
+    display: flex;
+    gap: 2rem;
+}
+
+.decrement, .increment {
+    padding: 0.5rem;
+}
+
+.product-info-page-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.info-page-btn {
+    height: 2rem;
+    border-radius: 10px;
+}
