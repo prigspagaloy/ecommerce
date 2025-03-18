@@ -79,8 +79,6 @@ webLogo.addEventListener("click", () => {
   }
 });
 
-
-
 const fetchCountry = (data) => {
     const countryName = document.querySelector(".delivery-location");
   

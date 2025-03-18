@@ -24,7 +24,9 @@ const productDisplay = (data) => {
                 </div>
                 <div class="product-info"> 
                     <div class="product-text-info">
-                        <h4 class="product-name">${items.title}</h4>
+                        <a href="${window.location.pathname === "/" || window.location.pathname === "/ecommerce/" ? `./pages/info.html?name=${items.title}&data=${items.id}` : `info.html?name=${items.title}&data=${items.id}`}">
+                            <h4 class="product-name">${items.title}</h4>
+                        </a>
                         <h2>$${items.price}</h2>
                     </div>
                     <button class="add-to-cart" data-name="${items.title}">Add to cart</button>

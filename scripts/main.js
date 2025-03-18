@@ -14,6 +14,11 @@ const productSlider = document.querySelectorAll(".product-slider-img");
 const imgSlider = document.querySelectorAll(".promotional-ad");
 const nextBtn = document.querySelector("#next");
 const prevBtn = document.querySelector("#prev");
+// const productBox = document.querySelector(".all-products-div-box");
+const productImg = document.querySelector(".all-products-div-box-container");
+// const freeShippingImg = document.querySelector(".free-shipping-img-box");
+const techImg = document.querySelector(".tech-container");
+const fashionImg = document.querySelector(".fashion-container");
 
 const promoAd = () => {
   
@@ -45,26 +50,47 @@ const promoAd = () => {
 promoAd();
 
 const pictureCollage = (data) => {
-  const productImg = document.querySelector(".all-products-div-box-container");
-  const techImg = document.querySelector(".tech-container");
-  const fashionImg = document.querySelector(".fashion-container");
   productImg.innerHTML = `
-    <img class="all-products-div-btn-img" src="${data[0].image}">
-    <img class="all-products-div-btn-img" src="${data[1].image}">
-    <img class="all-products-div-btn-img" src="${data[4].image}">
-    <img class="all-products-div-btn-img" src="${data[9].image}">
+    <div class="all-products-div-btn-img-box">
+      <img class="all-products-div-btn-img" src="${data[0].image}">
+    </div>
+    <div class="all-products-div-btn-img-box">
+      <img class="all-products-div-btn-img" src="${data[1].image}">
+    </div>
+    <div class="all-products-div-btn-img-box">
+      <img class="all-products-div-btn-img" src="${data[4].image}">
+    </div>
+    <div class="all-products-div-btn-img-box">
+      <img class="all-products-div-btn-img" src="${data[9].image}">
+    </div>
   `;
   techImg.innerHTML = `
-    <img class="all-products-div-btn-img" src="${data[8].image}">
-    <img class="all-products-div-btn-img" src="${data[9].image}">
-    <img class="all-products-div-btn-img" src="${data[10].image}">
-    <img class="all-products-div-btn-img" src="${data[11].image}">
+    <div class="all-products-div-btn-img-box">
+      <img class="all-products-div-btn-img" src="${data[8].image}">
+    </div>
+    <div class="all-products-div-btn-img-box">
+      <img class="all-products-div-btn-img" src="${data[9].image}">
+    </div>
+    <div class="all-products-div-btn-img-box">
+      <img class="all-products-div-btn-img" src="${data[10].image}">
+    </div>
+    <div class="all-products-div-btn-img-box">
+      <img class="all-products-div-btn-img" src="${data[11].image}">
+    </div>
   `;
   fashionImg.innerHTML = `
-    <img class="all-products-div-btn-img" src="${data[1].image}">
-    <img class="all-products-div-btn-img" src="${data[2].image}">
-    <img class="all-products-div-btn-img" src="${data[18].image}">
-    <img class="all-products-div-btn-img" src="${data[19].image}">
+    <div class="all-products-div-btn-img-box">
+      <img class="all-products-div-btn-img" src="${data[1].image}">
+    </div>
+    <div class="all-products-div-btn-img-box">
+      <img class="all-products-div-btn-img" src="${data[2].image}">
+    </div>
+    <div class="all-products-div-btn-img-box">
+      <img class="all-products-div-btn-img" src="${data[18].image}">
+    </div>
+    <div class="all-products-div-btn-img-box">
+      <img class="all-products-div-btn-img" src="${data[19].image}">
+    </div>
   `;
 };
 
@@ -112,6 +138,10 @@ const productSliderSection = (data) => {
     })
   })
 }
+
+console.log(productImg.getBoundingClientRect().width)
+console.log(productImg.clientWidth)
+console.log(productImg.offsetWidth)
 
 /* const categories = (data) => {
   productCategories.addEventListener("change", () => {
