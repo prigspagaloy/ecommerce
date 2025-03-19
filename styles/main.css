@@ -92,6 +92,10 @@
         width: 100%;
     }
 
+    .product-box::-webkit-scrollbar {
+        display: none;
+    }
+
     .all-products-div-box,
     .free-shipping,
     .tech,

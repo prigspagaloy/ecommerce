@@ -35,6 +35,16 @@ header.innerHTML = `
         <div class="hamburger-menu">
           <span class="hamburger-line"></span>
         </div>
+        <div class="burger-menu-section">
+          <div class="burger-sign-in">
+              <p>Sign In</p>
+          </div>
+          <ul class="burger-list">
+            <li>Home</li>
+            <li>Sell</li>
+            <li>Help</li>
+          </ul>
+        </div>
       </div>
       <div class="sign-in">
           <p>Sign In</p>
@@ -56,19 +66,18 @@ header.innerHTML = `
       <h4 class="page">Gift Cards</h4>
       <h4 class="page">Sell</h4>
     </section>
-    <div class="burger-menu-section"></div>
 `;
 
 const webLogo = document.querySelector(".web-logo");
 const searchImg = document.querySelector(".search-img");
 const cartLogo = document.querySelector(".cart-logo");
-const hamburger = document.querySelector(".hamburger-menu");
+export const hamburger = document.querySelector(".hamburger-menu");
 export const burgerLine = document.querySelector(".hamburger-line");
 const productCategory = document.querySelector(".category");
 const productCategoriesBox = document.querySelector(".product-categories-box");
 const productCategories = document.querySelector(".product-categories");
 export const cartCountDisplay = document.querySelector(".cart-count");
-const menuSection = document.querySelector(".burger-menu-section");
+export const menuSection = document.querySelector(".burger-menu-section");
 
 webLogo.addEventListener("click", () => {
   const pathArray = window.location.pathname.split("/");
@@ -142,10 +151,5 @@ export let cartCount = () => {
       : (cartCountDisplay.innerHTML = count);
   };
   cartCount();
-
-hamburger.addEventListener("click", () => {
-  burgerLine.classList.toggle("active");
-  menuSection.classList.toggle("show");
-})
 
 // console.log(window.location = "/pages/info.html")

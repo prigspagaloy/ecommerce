@@ -1,4 +1,5 @@
 import { header } from "./header.js";
+import "./hamburger.js";
 import { footer } from "./footer.js";
 
 fetch("https://fakestoreapi.com/products")
