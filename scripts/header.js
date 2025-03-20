@@ -40,7 +40,7 @@ header.innerHTML = `
               <p>Sign In</p>
           </div>
           <ul class="burger-list">
-            <a href="${window.location.pathname !== '/ecommerce/' ||  window.location.pathname !== '/' ? '/' : '../'}">
+            <a href="${window.location.pathname !== '/ecommerce/' ||  window.location.pathname !== '/' ? '../' : './'}">
               <li>Home</li>
             </a>
             <li>Sell</li>
