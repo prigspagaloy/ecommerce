@@ -1,4 +1,5 @@
 import { header, cart, cartCount } from "./header.js";
+import "./hamburger.js";
 import "./checkout.js";
 import { footer } from "./footer.js";
 

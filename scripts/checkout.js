@@ -1,4 +1,5 @@
 import "./header.js";
+import "./hamburger.js";
 import "./footer.js";
 
 const footer = document.querySelector(".footer-section");
