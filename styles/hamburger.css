@@ -65,16 +65,8 @@
     }
 
     .burger-menu-section.show {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        top: 0;
-        right: 0;
         width: 40%;
-        height: 100%;
-        font-size: 1.3rem;
-        background-color: white;
-        z-index: 2;
+        /* transform: translate(0); */
     }
 
     .burger-sign-in {
