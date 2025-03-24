@@ -3,12 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <title>Document</title>
+    <title>Checkout</title>
 </head>
 <body>
     <header class="header-section"></header>
-    <div class="web-content"></div>
+    <div class="web-content">
+        <div class="checkout-product-display">
+            <div class="checkout-product-info"></div>
+            <div class="place-order">
+                <h3>Pay With</h3>
+                <form action="/pages/sample_page.html">
+                    <div class="payment-method">
+                        <div class="debit-credit-box">
+                            <input id="debit-credit" name="choose-payment" type="radio">
+                            <div class="debit-credit-container">
+                                <label for="debit-credit">Debit/Credit Card</label>
+                                <div class="card-img-container">
+                                    <img class="debit-credit-img" src="/Img/card.png">
+                                    <img class="debit-credit-img" src="/Img/visa.png">
+                                    <img class="debit-credit-img" src="/Img/bank.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="paypal-box">
+                            <input id="paypal" name="choose-payment" type="radio">
+                            <div class="paypal-container">
+                                <label for="paypal">PayPal</label>
+                                <div class="paypal-img-container">
+                                    <img class="paypal-img" src="/Img/paypal.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="google-pay-box">
+                            <input type="radio" id="google-pay" name="choose-payment">
+                            <div class="google-pay-container">
+                                <label for="google-pay">Google Pay</label>
+                                <div class="google-pay-img-container">
+                                    <img class="google-pay-img" src="/Img/google-pay.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="total-price-container">
+                        <h1 class="total-price-text"></h1>
+                        <input class="submit-payment" type="submit" value="Place order">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
     <footer class="footer-section"></footer>
     <script type="module" src="../scripts/checkout.js"></script>
 </body>

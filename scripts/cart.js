@@ -1,6 +1,6 @@
 import "./header.js";
 import "./hamburger.js";
-import "./checkout.js";
+// import "./checkout.js";
 import "./footer.js";
 
 const headerSection = document.querySelector(".header-section");
@@ -165,24 +165,31 @@ const checkoutBox = (itemSubtotal) => {
   const checkoutBtn = document.querySelector(".checkout-btn");
   if (cart.length >= 1) {
     checkoutSubtotal.innerHTML = itemSubtotal.innerHTML;
+  } else if (cart.length !== 0) {
+    checkoutSection.style.display = "block";
   } else {
     checkoutBtn.style.display = "none";
   }
-  if (cart.length !== 0) {
-    checkoutSection.style.display = "block";
-  } else {
-    checkoutSection.style.display = "none";
-  }
+  // if (cart.length !== 0) {
+  //   checkoutSection.style.display = "block";
+  // } else {
+  //   checkoutSection.style.display = "none";
+  // }
 
   const checkoutContainerEvent = () => {
-    if (scrollY > 144) {
+    if (screen.width >= 600 && scrollY > 144) {
       checkoutContainer.classList.add("sticky");
       checkoutContainer.style.width = `${checkoutSection.offsetWidth}px`;
     } else {
       checkoutContainer.classList.remove("sticky");
     }
   }
-  window.addEventListener("scroll", checkoutContainerEvent);
+  if (screen.width < 600) {
+    window.removeEventListener("resize", checkoutContainerEvent);
+  } else {
+    window.addEventListener("scroll", checkoutContainerEvent);
+  }
+  
   console.log(checkoutContainer.getBoundingClientRect().top)
   console.log(checkoutContainer.offsetTop)
   console.log(window.scrollY)

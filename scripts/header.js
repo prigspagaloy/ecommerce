@@ -63,10 +63,16 @@ header.innerHTML = `
               </div>
           </div>
       </div>
-      <h4 class="page">Top Deals</h4>
+      <a href="/pages/sample_page.html">
+        <h4 class="page">Top Deals</h4>
+      </a>
       <h4 class="page">Customer Service</h4>
-      <h4 class="page">Gift Cards</h4>
-      <h4 class="page">Sell</h4>
+      <a href="/pages/sample_page.html">
+        <h4 class="page">Gift Cards</h4>
+      </a>
+      <a href="/pages/sample_page.html">
+        <h4 class="page">Sell</h4>
+      </a>
     </section>
 `;
 

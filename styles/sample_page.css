@@ -1,0 +1,10 @@
+.h1 {
+    place-content: center;
+    width: 100%;
+    min-height: 225px;
+}
+
+h1 {
+    text-align: center;
+    align-self: center;
+}

@@ -1,0 +1,101 @@
+.checkout-product-display {
+    width: 100%;
+}
+
+.checkout-img-box {
+    width: 10rem;
+    height: 10rem;
+}
+
+.checkout-img {
+    width: 100%;
+    height: 100%;
+}
+
+.checkout-product-info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    border-bottom: 1px solid black;
+}
+
+.checkout-product-info {
+    line-height: 4;
+}
+
+.checkout-quantity {
+    margin-left: 2rem;
+}
+
+.total-items-price {
+    float: right;
+    font-weight: bold;
+}
+
+.place-order {
+    padding: 2rem;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.debit-credit-box,
+.paypal-box,
+.google-pay-box {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+.debit-credit-container,
+.paypal-container,
+.google-pay-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.paypal-img-container,
+.google-pay-img-container {
+    width: 24px;
+    height: 24px;
+}
+
+.paypal-img,
+.google-pay-img {
+    width: 100%;
+    height: 100%;
+}
+
+.total-price-container {
+    /* float: right; */
+    text-align: center;
+    line-height: 2;
+}
+
+.submit-payment {
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    .checkout-product-info {
+        line-height: normal;
+    }
+
+    .total-price-container {
+        font-size: xx-small;
+        line-height: normal;
+    }
+
+    .checkout-img-box {
+        height: 7rem;
+    }
+    
+}
